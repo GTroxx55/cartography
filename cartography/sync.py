@@ -11,7 +11,7 @@ import cartography.intel.create_indexes
 import cartography.intel.crxcavator.crxcavator
 import cartography.intel.gcp
 import cartography.intel.gsuite
-import cartography.intel.okta
+#import cartography.intel.okta
 
 
 logger = logging.getLogger(__name__)
@@ -149,7 +149,7 @@ def build_default_sync():
         ('gcp', cartography.intel.gcp.start_gcp_ingestion),
         ('gsuite', cartography.intel.gsuite.start_gsuite_ingestion),
         ('crxcavator', cartography.intel.crxcavator.start_extension_ingestion),
-        ('okta', cartography.intel.okta.start_okta_ingestion),
+ #      ('okta', cartography.intel.okta.start_okta_ingestion),
         ('analysis', cartography.intel.analysis.run),
     ])
     return sync
